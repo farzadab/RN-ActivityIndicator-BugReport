@@ -3,7 +3,7 @@ Sample App for a bug report for React Native
 
 ## The problem
 
-I have a screen with an `ActivityIndicator` which should be removed after some time (i.e. when the data arrives). But the problem is that it still remains on screen even after it is removed (or not outputted) in the render function. In addition, the `backgroundColor` of the `View` above disappears, too.
+I put an `ActivityIndicator` on screen, which should be removed after some time (i.e. when the data arrives). But the problem is that it still remains on screen even after it is removed (or not outputted) in the render function. In addition, the `backgroundColor` of the `View` above disappears, too.
 
 I also found out that doing one of the following fixes the problem, but I don't know why:
   - Unset the `zIndex` for the `View` above (having `zIndex` here has no reason what so ever, but I needed this in the project I was working on)
