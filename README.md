@@ -1,6 +1,10 @@
 # RN-ActivityIndicator-BugReport
 Sample App for a bug report for React Native
 
+## (Update) Workaround
+
+It seems like a bug with `zIndex`. As [janicduplessis](https://github.com/janicduplessis) suggested, I added `collapsable={false}` to the parent `View` and it worked. The fixed implementation is available under `index.android.fixed.js`.
+
 ## The problem
 
 I put an `ActivityIndicator` on screen, which should be removed after some time (i.e. when the data arrives). But the problem is that it still remains on screen even after it is removed (or not outputted) in the render function. In addition, the `backgroundColor` of the `View` above disappears, too.
